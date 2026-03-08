@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON-LD structured data
+        run: |
+          # Extract JSON-LD from index.html and validate it is well-formed JSON
+          sed -n '/<script type="application\/ld+json">/,/<\/script>/p' index.html \
+            | sed '1d;$d' \
+            | python3 -m json.tool > /dev/null
+          echo "JSON-LD is valid JSON"
