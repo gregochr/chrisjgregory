@@ -11,13 +11,13 @@
 <meta property="og:title" content="Chris Gregory — Technical Delivery Manager">
 <meta property="og:description" content="Senior Technical Delivery Manager with 25+ years in financial services. Based in Durham, available hybrid or remote UK-wide.">
 <meta property="og:url" content="https://chrisjgregory.dev">
-<meta property="og:image" content="https://chrisjgregory.dev/castlerigg.jpg">
+<meta property="og:image" content="https://chrisjgregory.dev/img/castlerigg.jpg">
 <meta property="og:image:width" content="1920">
 <meta property="og:image:height" content="800">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Chris Gregory — Technical Delivery Manager">
 <meta name="twitter:description" content="Senior Technical Delivery Manager with 25+ years in financial services. Based in Durham, available hybrid or remote UK-wide.">
-<meta name="twitter:image" content="https://chrisjgregory.dev/castlerigg.jpg">
+<meta name="twitter:image" content="https://chrisjgregory.dev/img/castlerigg.jpg">
 <title>Chris Gregory — Technical Delivery Manager & Builder</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="favicon.svg">
@@ -211,6 +211,13 @@
     max-width: 40ch;
     margin-bottom: 2.5rem;
     font-weight: 300;
+  }
+  .hero-tags-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--light);
+    opacity: 0.4;
+    margin: 0.25rem 0;
   }
   .hero-tags {
     display: flex;
@@ -474,10 +481,22 @@
     letter-spacing: 0.1em;
     margin-bottom: 1.25rem;
   }
+  .project-name-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.4rem;
+  }
+  .project-logo {
+    height: 56px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 6px;
+  }
   .project-name {
     font-family: 'Cormorant SC', serif;
     font-size: 1.6rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0;
     line-height: 1.15;
     font-weight: 600;
   }
@@ -541,15 +560,20 @@
     overflow: hidden;
   }
   .outside-card:last-child { border-right: none; }
+  .outside-name-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
   .outside-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
     display: block;
   }
   .outside-card h3 {
     font-family: 'Cormorant SC', serif;
     font-size: 1.4rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0;
     font-weight: 600;
   }
   .outside-card h3 em { font-style: italic; color: var(--accent); font-family: 'Cormorant Garamond', serif; }
@@ -846,13 +870,14 @@
     <h1 class="hero-name fade-up fade-up-2">Chris<br><em>Gregory</em></h1>
     <p class="hero-desc fade-up fade-up-3">25+ years delivering complex technology programmes in financial services — and building production-grade side projects because I love to build.</p>
     <div class="hero-tags fade-up fade-up-4">
-      <span class="tag">Java & Spring Boot</span>
-      <span class="tag">Docker</span>
-      <span class="tag">CI/CD</span>
-      <span class="tag">Fail Fast, Fix Early</span>
-      <span class="tag">Relational / Schemaless Databases</span>
-      <span class="tag">Cloud Migration</span>
-      <span class="tag">Agile / DevOps</span>
+      <span class="tag">Technical Delivery Management</span>
+      <span class="tag">Engineering Excellence Culture</span>
+      <span class="tag">Stakeholder Engagement</span>
+      <span class="tag">Technical Governance</span>
+      <span class="tag">Polyglot Engineering</span>
+      <span class="tag">Regulatory Delivery</span>
+      <span class="tag">Agile & DevOps</span>
+      <span class="hero-tags-divider"></span>
       <span class="tag">Durham, UK</span>
       <span class="tag">📍 Office / Hybrid · NE England</span>
       <span class="tag">🌐 Hybrid / Remote · UK-wide</span>
@@ -864,8 +889,8 @@
     </div>
     <div class="hero-photo fade-up fade-up-3">
       <picture>
-        <source srcset="castlerigg.webp" type="image/webp">
-        <img src="castlerigg.jpg" alt="Castlerigg stone circle at sunset, Lake District" width="1920" height="823" loading="eager">
+        <source srcset="img/castlerigg.webp" type="image/webp">
+        <img src="img/castlerigg.jpg" alt="Castlerigg stone circle at sunset, Lake District" width="1920" height="823" loading="eager">
       </picture>
     </div>
     <div class="hero-stats fade-up fade-up-4">
@@ -897,8 +922,8 @@
   </div>
   <div class="about-photo reveal">
     <picture>
-      <source srcset="photo.webp" type="image/webp">
-      <img src="photo.jpg" alt="Chris Gregory on a fell walk at sunrise — hooded jacket, dramatic orange sky behind him" width="300" height="200" loading="lazy">
+      <source srcset="img/photo.webp" type="image/webp">
+      <img src="img/photo.jpg" alt="Chris Gregory on a fell walk at sunrise — hooded jacket, dramatic orange sky behind him" width="300" height="200" loading="lazy">
     </picture>
     <div class="about-photo-caption">
       <h3>Chris <em>Gregory</em></h3>
@@ -992,7 +1017,10 @@
   <div class="projects-grid">
 
     <div class="project-card reveal">
-      <h3 class="project-name"><em>PhotoCast</em></h3>
+      <div class="project-name-row">
+        <h3 class="project-name"><em>PhotoCast</em></h3>
+        <img src="img/photocast-logo.png" alt="PhotoCast logo" class="project-logo" loading="lazy">
+      </div>
       <div class="project-tagline">AI Forecasts for Fiery Skies & Golden Light</div>
       <p class="project-desc">An AI-powered atmospheric forecasting engine for landscape photographers. Combines weather, tide and atmospheric data with Claude AI to predict the conditions that produce dramatic golden hour skies. The first application on the Nephel AI platform, specialising in atmospheric forecasting.</p>
       <div class="project-badges">
@@ -1009,9 +1037,12 @@
     </div>
 
     <div class="project-card reveal">
-      <h3 class="project-name"><em>VBGone</em></h3>
+      <div class="project-name-row">
+        <h3 class="project-name"><em>VBGone</em></h3>
+        <img src="img/vbgone-logo.svg" alt="VBGone logo" class="project-logo" loading="lazy">
+      </div>
       <div class="project-tagline">AI-Powered VB.NET to C# Migration</div>
-      <p class="project-desc">Uses the Claude AI API to intelligently convert legacy VB.NET codebases into idiomatic C#. More than a syntax translator — it understands patterns, idioms, and context to produce clean, production-ready C# output. A practical tool for modernising .NET portfolios.</p>
+      <p class="project-desc">Uses the Claude AI API to intelligently convert legacy VB.NET codebases into idiomatic C#. More than a syntax translator — it understands patterns, idioms, and context to produce clean, production-ready C# output. Built around a red-green test-driven workflow, ensuring every conversion is validated before it ships. A practical tool for modernising .NET portfolios.</p>
       <div class="project-badges">
         <span class="badge accent">Claude AI</span>
         <span class="badge accent">C#</span>
@@ -1024,7 +1055,10 @@
     </div>
 
     <div class="project-card reveal">
-      <h3 class="project-name"><em>CineLight</em></h3>
+      <div class="project-name-row">
+        <h3 class="project-name"><em>CineLight</em></h3>
+        <img src="img/cinelight-logo.svg" alt="CineLight logo" class="project-logo" loading="lazy">
+      </div>
       <div class="project-tagline">Plex Events → Philips Hue Lighting</div>
       <p class="project-desc">A lightweight Spring Boot webhook handler that listens to Plex Media Server events and drives Philips Hue lighting scenes in response. Play a film and the room changes. Pause and it brightens. A small project — but production-grade, Dockerised, and running reliably 24/7.</p>
       <div class="project-badges">
@@ -1050,22 +1084,28 @@
   <div class="outside-grid">
 
     <div class="outside-card reveal">
-      <span class="outside-icon">📷</span>
-      <h3>Landscape <em>Photography</em></h3>
+      <div class="outside-name-row">
+        <h3>Landscape <em>Photography</em></h3>
+        <span class="outside-icon">📷</span>
+      </div>
       <p>Landscape and Seascape photography, mostly in the North East of England and the Lake District. I shoot manual on a DSLR, chasing the light at sunrise and sunset. My editing style is naturalistic, influenced by Joe Cornish and Mark Littlejohn.</p>
       <div class="outside-card-bg">📷</div>
     </div>
 
     <div class="outside-card reveal">
-      <span class="outside-icon">🏔️</span>
-      <h3>Fell <em>Walking</em></h3>
+      <div class="outside-name-row">
+        <h3>Fell <em>Walking</em></h3>
+        <span class="outside-icon">🏔️</span>
+      </div>
       <p>Regular trips to the Lake District, working through the Wainwrights. Fell walking gives me the same thing photography does — patience, presence, and perspective. There's something about being somewhere genuinely remote that resets everything.</p>
       <div class="outside-card-bg">🏔️</div>
     </div>
 
     <div class="outside-card reveal">
-      <span class="outside-icon">🏏</span>
-      <h3>Cricket & <em>Community</em></h3>
+      <div class="outside-name-row">
+        <h3>Cricket & <em>Community</em></h3>
+        <span class="outside-icon">🏏</span>
+      </div>
       <p>Involved with a local cricket club that's building a growing youth section in an economically challenged area. Helping the next generation find the game — sourcing funding, developing coaching, and building a club that the community can be proud of.</p>
       <div class="outside-card-bg">🏏</div>
     </div>
@@ -1084,8 +1124,8 @@
     <div class="contact-content-with-photo reveal">
       <div class="contact-photo-wrap">
         <picture>
-          <source srcset="photo.webp" type="image/webp">
-          <img src="photo.jpg" alt="Chris Gregory on a fell walk at sunrise" width="300" height="200" loading="lazy">
+          <source srcset="img/photo.webp" type="image/webp">
+          <img src="img/photo.jpg" alt="Chris Gregory on a fell walk at sunrise" width="300" height="200" loading="lazy">
         </picture>
       </div>
       <div class="contact-text">
