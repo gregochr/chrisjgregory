@@ -448,18 +448,20 @@
   /* ─── PROJECTS ─── */
   .projects-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     border-top: 1px solid var(--rule);
   }
   .project-card {
     padding: 2.5rem 3rem;
     border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
     display: flex;
     flex-direction: column;
     transition: background 0.25s;
     position: relative;
   }
-  .project-card:last-child { border-right: none; }
+  .project-card:nth-child(even) { border-right: none; }
+  .project-card:nth-child(n+3) { border-bottom: none; }
   .project-card:hover { background: var(--white); }
   .project-number {
     font-family: 'Playfair Display', serif;
@@ -1051,6 +1053,25 @@
         <span class="badge">Webhooks</span>
       </div>
       <a href="https://github.com/gregochr" class="project-link" target="_blank">View on GitHub →</a>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-name-row">
+        <h3 class="project-name"><em>Liminal</em></h3>
+      </div>
+      <div class="project-tagline">Smart Wake &amp; Sleep Music Automation</div>
+      <p class="project-desc">A scheduled wake-up and sleep application that plays music on smart speakers, gradually ramping volume up or down. Built for a family member with specific health needs — reliability and zero daily interaction are essential. Supports Sonos multi-room grouping and Spotify Connect, with per-context service selection so wake and sleep can use independent music sources.</p>
+      <div class="project-badges">
+        <span class="badge accent">Java</span>
+        <span class="badge accent">Spring Boot</span>
+        <span class="badge">React</span>
+        <span class="badge">Quartz Scheduler</span>
+        <span class="badge">Sonos API</span>
+        <span class="badge">Spotify API</span>
+        <span class="badge">Docker</span>
+        <span class="badge">Cloudflare</span>
+      </div>
+      <a href="https://github.com/gregochr/liminal" class="project-link" target="_blank">View on GitHub →</a>
     </div>
 
   </div>
