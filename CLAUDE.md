@@ -8,7 +8,7 @@ This file gives Claude Code context about this project so it can assist effectiv
 
 A static HTML personal portfolio site for **Chris Gregory**, Senior Technical Delivery Manager, Durham UK. The site bridges professional delivery leadership credentials with hands-on technical depth via personal dev projects.
 
-**Live domain (pending confirmation):** `cjgregory.dev`
+**Live domain:** `chrisjgregory.dev`
 **Deployed via:** Cloudflare Tunnel → nginx container on Mac Mini (Docker)
 
 ---
@@ -43,17 +43,18 @@ A static HTML personal portfolio site for **Chris Gregory**, Senior Technical De
 
 ---
 
-## Design system
+## Design system ("Build Log", Nov 2026)
 
 | Token | Value |
 |-------|-------|
-| Primary accent | `#9e4a1f` (WCAG AA compliant on small text) |
-| Badge accent text | `#7a3a18` on `#f0e0d6` |
-| Heading font | Cormorant SC (small-caps) |
-| Italic accent font | Cormorant Garamond |
-| Body font | DM Sans |
-| Code/label font | DM Mono |
-| Theme | Light editorial |
+| Background | `#0f1115` (bands `#13161c`, cards `#171a21`, borders `#262b35`) |
+| Text / soft / muted | `#e6e8ec` / `#c9ced6` / `#9ba3af` (muted is 7.4:1 on bg) |
+| Accent | `#f2a541` amber (hover `#ffd08a`); dark text on amber buttons |
+| Status green | `#6ccb8a` |
+| Display font | Space Grotesk |
+| Body font | Inter |
+| Code/label font | JetBrains Mono |
+| Theme | Dark, terminal-inspired |
 
 Accessibility: WCAG 2.1 AA throughout. Skip link, `<main id="main">`, aria-labels on all sections, `aria-hidden` on decorative SVGs, `:focus-visible` styles, `prefers-reduced-motion` media query.
 
@@ -62,16 +63,15 @@ Accessibility: WCAG 2.1 AA throughout. Skip link, `<main id="main">`, aria-label
 ## Site structure
 
 ```
-Nav          — CG logo, links, GitHub + LinkedIn icons (sticky, backdrop-blur)
-Hero         — 2-column: name/tagline/tags | dark panel with quote + stats
-Photo banner — Castlerigg Stone Circle, 70vh, full-width (between Hero and About)
-About        — Profile photo, sidebar, two prose columns (Professionally / As a Builder)
-Stack        — 3-column grid: Languages & Frameworks | Infrastructure & Data | Quality & Delivery
-Projects     — PhotoCast · VBGone · CineLight
-Outside Work — Landscape Photography · Fell Walking · Cricket & Community
-Contact      — 3-column: photo | "Let's talk" + email button | contact details
-Footer       — CG icon, copyright
+Nav          — "chris@durham:~$ whoami" home link, ./projects ./practice ./outside ./contact (sticky, backdrop-blur)
+Hero         — name/tagline/lede/CTAs | CI pipeline panel (figure)
+Projects     — 6 cards: PhotoCast · VBGone · Wainwrights · CineLight · CineFilm (in progress) · Liminal
+Practice     — "Automate early. Test often. Ship frequently." + 4 practices
+Outside      — Photography (Glencoe) · Wainwrights (Derwentwater) · Cricket
+Contact      — "$ ping chris" + email / GitHub / LinkedIn (footer)
 ```
+
+Positioning: builder portfolio, not job-seeking. Chris is Technical Delivery Manager at Euroclear.
 
 ---
 
@@ -138,7 +138,7 @@ Commit style: **Conventional Commits** — e.g. `feat:`, `fix:`, `chore:`, `docs
 
 ## What not to change
 
-- The accent colour `#9e4a1f` — it was deliberately darkened from `#c0622f` for WCAG AA compliance. Don't revert it.
+- Colour contrast: every text colour above passes WCAG AA on its background — check before adding new shades.
 - The `<picture>` elements for images — WebP fallback pattern is intentional.
 - The `TUNNEL_TOKEN` must stay in `.env` and out of version control.
 - Page has exactly one `<h1>` (the name). Keep it that way.
