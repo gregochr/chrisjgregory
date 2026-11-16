@@ -81,7 +81,7 @@ Positioning: builder portfolio, not job-seeking. Chris is Technical Delivery Man
 AI-powered atmospheric forecasting app for landscape photographers.
 - Stack: Java, Spring Boot, React, PostgreSQL, Docker, Claude AI, Open-Meteo, Cloudflare
 - First app on the **Nephel platform**
-- GitHub: github.com/gregochr
+- GitHub: github.com/gregochr/goldenhour
 
 ### VBGone
 AI-assisted VB.NET → C# migration tool using the Claude API.
